@@ -1,26 +1,26 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
-  padding: 0;
+  overflow: hidden;
+  background: #000000;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+  padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/bg.png"), linear-gradient(-45deg, rgb(255, 0, 0), rgb(255, 123, 0), rgb(255, 0, 204), rgb(255, 0, 102));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* linear-gradient(-45deg, rgb(255, 0, 0), rgb(255, 123, 0), rgb(255, 0, 204), rgb(255, 0, 102)) */
+/* linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), */
+.drop-btn:focus > .drop-down {
+  z-index: 99 !important;
+  opacity: 1 !important;
 }
